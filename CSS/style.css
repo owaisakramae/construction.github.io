@@ -1,3 +1,9 @@
+/* h2 {
+  font-size: 2rem;
+} */
+:root {
+  --color-primary: rgb(255, 193, 7);
+}
 a {
   text-decoration: none;
 }
@@ -21,4 +27,95 @@ li {
 }
 ul {
   margin-bottom: 0 !important;
+}
+.product-container {
+  max-width: 60%;
+}
+.product-img {
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 15px 0px -15px #f0f0f0, 0 0px 0px 1px #f0f0f0;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 0;
+  transition: all 0.2s ease-in-out;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+.product-box:hover h2 {
+  color: var(--color-primary) !important;
+}
+.line-before {
+  width: 30px;
+  height: 2px;
+  background-color: var(--color-primary);
+}
+.line {
+  width: 6px;
+  height: 6px;
+  margin: 0px 10px 0px 10px;
+  background-color: var(--color-primary);
+}
+.line-after {
+  width: 30px;
+  height: 2px;
+  background-color: var(--color-primary);
+}
+.product-category {
+  background: url(../images/built-robotics-92nDruwPF2s-unsplash-1024x427.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.product-category .image-overlay {
+  background-color: rgba(44, 40, 34, 0.9);
+}
+form input,
+form select,
+form button {
+  height: 3.5rem;
+}
+.form-select:focus {
+  border-color: var(--color-primary) !important;
+  box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25);
+}
+
+.nav-pills-custom .nav-link {
+  color: #aaa;
+  background: #fff;
+  position: relative;
+  font-weight: 700;
+}
+
+.nav-pills-custom .nav-link.active {
+  color: var(--color-primary);
+  background: #fff;
+}
+.button-color {
+  background-color: var(--color-primary) !important;
+}
+/* Add indicator arrow for the active tab */
+@media (min-width: 992px) {
+  .nav-pills-custom .nav-link::before {
+    content: "";
+    display: block;
+    border-top: 8px solid transparent;
+    border-left: 10px solid #fff;
+    border-bottom: 8px solid transparent;
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+}
+
+.nav-pills-custom .nav-link.active::before {
+  opacity: 1;
+}
+
+@media (min-width: 980px) {
+  .inner-form > div {
+    width: 20%;
+  }
 }
