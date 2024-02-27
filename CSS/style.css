@@ -26,7 +26,8 @@ li {
   position: relative;
 }
 ul {
-  margin-bottom: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 .product-container {
   max-width: 60%;
@@ -34,13 +35,14 @@ ul {
 .product-img {
   overflow: hidden;
   text-align: center;
-  box-shadow: 0 15px 0px -15px #f0f0f0, 0 0px 0px 1px #f0f0f0;
+  /* box-shadow: 0 15px 0px -15px #f0f0f0, 0 0px 0px 1px #f0f0f0;
   background-color: transparent;
-  border: 1px solid transparent;
+  border: 1px solid transparent; */
   border-radius: 0;
   transition: all 0.2s ease-in-out;
   -o-object-fit: contain;
   object-fit: contain;
+  filter: invert(1);
 }
 .product-box:hover h2 {
   color: var(--color-primary) !important;
@@ -94,6 +96,11 @@ form button {
 .button-color {
   background-color: var(--color-primary) !important;
 }
+.responsive img {
+  object-fit: cover;
+  max-width: 150px;
+  max-height: 60px;
+}
 /* Add indicator arrow for the active tab */
 @media (min-width: 992px) {
   .nav-pills-custom .nav-link::before {
@@ -117,5 +124,10 @@ form button {
 @media (min-width: 980px) {
   .inner-form > div {
     width: 20%;
+  }
+}
+@media (max-width: 576px) {
+  .new-dir {
+    flex-direction: column;
   }
 }
